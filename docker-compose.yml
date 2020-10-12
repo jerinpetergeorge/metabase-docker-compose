@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  metabase_app:
+    image: metabase/metabase
+    container_name: metabase_app
+    volumes:
+      - ~/local-metabase-data:/metabase-data
+    ports:
+      - "3000:3000"
+    networks:
+      metabase_app_nw:
+networks:
+  metabase_app_nw:
